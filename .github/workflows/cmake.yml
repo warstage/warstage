@@ -21,6 +21,15 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Install llvm
+      run: wget https://apt.llvm.org/llvm.sh \
+        && chmod +x llvm.sh \
+        && ./llvm.sh 10 \
+        && ln -s /usr/bin/clang++-10 /usr/bin/clang++ \
+        && ln -s /usr/bin/clang-10 /usr/bin/clang \
+        && apt-get install -y libc++-10-dev libc++abi-10-dev \
+        && ln -s /usr/lib/llvm-10 /usr/lib/llvm
+
     - name: Install boost
       run: cd engine/lib && ./boost.sh
 
