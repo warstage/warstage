@@ -26,12 +26,12 @@ include_directories(.
         src
         )
 
-link_directories(
-        ${OPENGL_INCLUDE_DIRS}
-)
+# link_directories(
+#         ${OPENGL_INCLUDE_DIRS}
+# )
 
 link_libraries(
-        ${OPENGL_LIBRARIES}
+        # ${OPENGL_LIBRARIES}
         ${ZLIB_LIBRARIES}
         Threads::Threads
 )
