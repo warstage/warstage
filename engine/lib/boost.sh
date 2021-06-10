@@ -3,7 +3,7 @@
 # Copyright Felix Ungman. All rights reserved.
 # Licensed under GNU General Public License version 3 or later.
 
-version=1.71.0
+version=1.76.0
 boost_version=boost_${version//./_}
 
 if [ -x boost-${version} ]; then
