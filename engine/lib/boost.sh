@@ -9,7 +9,7 @@ _version=_${version//./_}
 if [ -x boost${_version} ]; then
     echo "boost already installed"
 else
-    wget https://boostorg.jfrog.io/artifactory/main/release/${version}/source/boost${_version}.tar.gz
+    wget --quiet https://boostorg.jfrog.io/artifactory/main/release/${version}/source/boost${_version}.tar.gz
     tar -xf boost${_version}.tar.gz
     rm boost${_version}.tar.gz
 fi

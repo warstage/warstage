@@ -8,7 +8,7 @@ version=0.9.9.8
 if [ -x glm-${version} ]; then
     echo "glm already installed"
 else
-    wget https://github.com/g-truc/glm/archive/${version}.zip
+    wget --quiet https://github.com/g-truc/glm/archive/${version}.zip
     unzip -q ${version}.zip
     rm ${version}.zip
 fi
