@@ -14,15 +14,15 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-deprecated")
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DGLM_FORCE_SWIZZLE")
 
-find_package(ZLIB REQUIRED)
+# find_package(ZLIB REQUIRED)
 # find_package(OpenGL REQUIRED)
 
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
 
-include_directories(.
-        ${ZLIB_ICLUDE_DIRS}
-        lib/boost_1_76_0
+include_directories(
+        # ${ZLIB_INCLUDE_DIRS}
+        lib/boost-1.71.0
         lib/glm-0.9.9.8
         src
         )
@@ -33,7 +33,7 @@ include_directories(.
 
 link_libraries(
         # ${OPENGL_LIBRARIES}
-        ${ZLIB_LIBRARIES}
+        # ${ZLIB_LIBRARIES}
         Threads::Threads
 )
 
@@ -43,11 +43,11 @@ add_executable(warstage-engine
         src/value/compressor.cpp
         src/value/compressor.test.cpp
         src/value/decompressor.cpp
+        src/value/dictionary.cpp
         src/value/json.cpp
         src/value/json.test.cpp
         src/value/value.cpp
         src/value/value.test.cpp
-        src/utilities/dictionary.cpp
         )
 
 add_test(warstage-engine warstage-engine

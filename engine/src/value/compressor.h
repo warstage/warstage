@@ -5,7 +5,7 @@
 #define WARSTAGE__VALUE__COMPRESSOR_H
 
 #include "./value.h"
-#include "utilities/dictionary.h"
+#include "./dictionary.h"
 #include <unordered_map>
 
 

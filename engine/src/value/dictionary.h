@@ -1,8 +1,8 @@
 // Copyright Felix Ungman. All rights reserved.
 // Licensed under GNU General Public License version 3 or later.
 
-#ifndef WARSTAGE__UTILITIES__DICTIONARY_H
-#define WARSTAGE__UTILITIES__DICTIONARY_H
+#ifndef WARSTAGE__VALUE__DICTIONARY_H
+#define WARSTAGE__VALUE__DICTIONARY_H
 
 #include <cassert>
 #include <string>
@@ -58,9 +58,10 @@ public:
     }
     
     T& Value(const char* key, bool cachable = false) {
-        int index = symbols_.GetIndex(key, cachable);
-        while (index >= static_cast<int>(values_.size()))
+        const int index = symbols_.GetIndex(key, cachable);
+        while (index >= static_cast<int>(values_.size())) {
             values_.emplace_back();
+        }
         return values_[index];
     }
 

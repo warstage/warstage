@@ -3,13 +3,14 @@
 # Copyright Felix Ungman. All rights reserved.
 # Licensed under GNU General Public License version 3 or later.
 
-version=1.76.0
-_version=_${version//./_}
+version=1.71.0
+boost_version=boost_${version//./_}
 
-if [ -x boost${_version} ]; then
+if [ -x boost-${version} ]; then
     echo "boost already installed"
 else
-    wget --quiet https://boostorg.jfrog.io/artifactory/main/release/${version}/source/boost${_version}.tar.gz
-    tar -xf boost${_version}.tar.gz
-    rm boost${_version}.tar.gz
+    wget https://boostorg.jfrog.io/artifactory/main/release/${version}/source/${boost_version}.tar.gz
+    tar -xf ${boost_version}.tar.gz
+    rm ${boost_version}.tar.gz
+    mv ${boost_version} boost-${version}
 fi
