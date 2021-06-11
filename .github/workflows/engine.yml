@@ -25,6 +25,12 @@ jobs:
       run: |
         clang --version
         clang++ --version
+        sudo apt-get update
+        sudo apt-get install -y libc++-11-dev libc++abi-11-dev
+        sudo ln -s /usr/lib/llvm-10 /usr/lib/llvm
+
+    - name: Install boost & glm
+      run: |
         cd engine/lib
         ./boost.sh
         ./glm.sh
