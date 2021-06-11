@@ -1,4 +1,4 @@
-![Engine](https://github.com/warstage/warstage/actions/workflows/engine.yml/badge.svg)
+[![Engine](https://github.com/warstage/warstage/actions/workflows/engine.yml/badge.svg)](https://github.com/warstage/warstage/actions/workflows/engine.yml)
 
 # Warstage
 
