@@ -21,7 +21,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Install boost & glm
+    - name: Install libc++
       run: |
         clang --version
         clang++ --version

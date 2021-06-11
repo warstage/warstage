@@ -4,6 +4,7 @@
 #ifndef WARSTAGE__STRAND__STRAND_BASE_H
 #define WARSTAGE__STRAND__STRAND_BASE_H
 
+#include <cassert>
 #include <mutex>
 #include <experimental/coroutine>
 
