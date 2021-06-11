@@ -25,9 +25,7 @@ jobs:
       run: |
         clang --version
         clang++ --version
-        lld version
         cd engine/lib
-        lld version
         ./boost.sh
         ./glm.sh
 
