@@ -101,6 +101,15 @@ add_executable(warstage-engine
         src/image/gaussian-blur.cpp
         src/image/image.cpp
         src/image/lodepng.cpp
+        src/matchmaker/lobby-supervisor.cpp
+        src/matchmaker/lobby-supervisor.test.cpp
+        src/matchmaker/master-supervision-policy.cpp
+        src/matchmaker/battle-supervisor.cpp
+        src/player/player-session.cpp
+        src/player/player-endpoint.cpp
+        src/player/player-frontend.cpp
+        src/player/player-backend.cpp
+        src/player/player-window.cpp
         src/runtime/web-socket-endpoint.cpp
         src/runtime/mock-endpoint.cpp
         src/runtime/endpoint.cpp
