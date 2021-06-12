@@ -1,8 +1,8 @@
 // Copyright Felix Ungman. All rights reserved.
 // Licensed under GNU General Public License version 3 or later.
 
-#ifndef WARSTAGE__STRAND__STRAND_BASE_H
-#define WARSTAGE__STRAND__STRAND_BASE_H
+#ifndef WARSTAGE__ASYNC__STRAND_BASE_H
+#define WARSTAGE__ASYNC__STRAND_BASE_H
 
 #include <cassert>
 #include <mutex>

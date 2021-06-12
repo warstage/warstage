@@ -41,6 +41,8 @@ link_libraries(
         Threads::Threads
 )
 
+
+
 add_executable(warstage-engine
         main.cpp
         src/async/mutex.cpp
@@ -49,11 +51,20 @@ add_executable(warstage-engine
         src/async/promise.test.cpp
         src/async/shutdownable.cpp
         src/async/shutdownable.test.cpp
-        src/async/strand.cpp
-        src/async/strand.test.cpp
         src/async/strand-asio.cpp
         src/async/strand-base.cpp
         src/async/strand-manual.cpp
+        src/async/strand.cpp
+        src/async/strand.test.cpp
+        src/geometry/b-spline-patch.cpp
+        src/geometry/b-spline.cpp
+        src/geometry/geometry.cpp
+        src/geometry/quad-tree.cpp
+        src/geometry/velocity-sampler.cpp
+        src/image/gaussian-blur.cpp
+        src/image/image.cpp
+        src/image/lodepng.cpp
+        src/utilities/logging.cpp
         src/value/builder.test.cpp
         src/value/compressor.cpp
         src/value/compressor.test.cpp
@@ -63,7 +74,6 @@ add_executable(warstage-engine
         src/value/json.test.cpp
         src/value/value.cpp
         src/value/value.test.cpp
-        src/utilities/logging.cpp
         )
 
 add_test(warstage-engine warstage-engine
