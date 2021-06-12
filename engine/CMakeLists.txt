@@ -52,6 +52,9 @@ add_executable(warstage-engine
         src/geometry/geometry.cpp
         src/geometry/quad-tree.cpp
         src/geometry/velocity-sampler.cpp
+        src/gesture/gesture.cpp
+        src/gesture/pointer.cpp
+        src/gesture/surface.cpp
         src/graphics/framebuffer.cpp
         src/graphics/graphics-api.cpp
         src/graphics/graphics.cpp
