@@ -14,6 +14,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-deprecated")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DGLM_FORCE_SWIZZLE")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DBOOST_ASIO_USE_TS_EXECUTOR_AS_DEFAULT=1")
 
 
 # find_package(ZLIB REQUIRED)
@@ -64,6 +65,31 @@ add_executable(warstage-engine
         src/image/gaussian-blur.cpp
         src/image/image.cpp
         src/image/lodepng.cpp
+        src/runtime/web-socket-endpoint.cpp
+        src/runtime/mock-endpoint.cpp
+        src/runtime/endpoint.cpp
+        src/runtime/event-class.cpp
+        src/runtime/federate.cpp
+        src/runtime/federation.cpp
+        src/runtime/object-class.cpp
+        src/runtime/object.cpp
+        src/runtime/ownership-state.test.cpp
+        src/runtime/ownership.cpp
+        src/runtime/ownership.test.cpp
+        src/runtime/runtime-fixture-auto_correct.test.cpp
+        src/runtime/runtime-fixture-ownership_divestiture.test.cpp
+        src/runtime/runtime-fixture-ownership_negotiation.test.cpp
+        src/runtime/runtime-fixture-ownership_policy.test.cpp
+        src/runtime/runtime-fixture-ownership_unpublish.test.cpp
+        src/runtime/runtime-fixture-startup-shutdown.test.cpp
+        src/runtime/runtime-fixture-sync_object.test.cpp
+        src/runtime/runtime.cpp
+        src/runtime/service-class.cpp
+        src/runtime/web-socket-session.cpp
+        src/runtime/session-federate.cpp
+        src/runtime/mock-session.cpp
+        src/runtime/session.cpp
+        src/runtime/supervision-policy.cpp
         src/utilities/logging.cpp
         src/value/builder.test.cpp
         src/value/compressor.cpp
@@ -75,6 +101,8 @@ add_executable(warstage-engine
         src/value/value.cpp
         src/value/value.test.cpp
         )
+
+
 
 add_test(warstage-engine warstage-engine
         --logger=HRF,all
