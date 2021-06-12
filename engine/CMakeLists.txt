@@ -16,33 +16,23 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -stdlib=libc++")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DGLM_FORCE_SWIZZLE")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DBOOST_ASIO_USE_TS_EXECUTOR_AS_DEFAULT=1")
 
-
-# find_package(ZLIB REQUIRED)
-# find_package(OpenGL REQUIRED)
-
 set(THREADS_PREFER_PTHREAD_FLAG ON)
 find_package(Threads REQUIRED)
 
-include_directories(SYSTEM /usr/include/c++/10)
-
-include_directories(
-        # ${ZLIB_INCLUDE_DIRS}
+include_directories(SYSTEM
+        /usr/include/c++/10
         lib/boost-1.76.0
         lib/glm-0.9.9.8
+        lib/khronos
+        )
+
+include_directories(
         src
         )
 
-# link_directories(
-#         ${OPENGL_INCLUDE_DIRS}
-# )
-
 link_libraries(
-        # ${OPENGL_LIBRARIES}
-        # ${ZLIB_LIBRARIES}
         Threads::Threads
 )
-
-
 
 add_executable(warstage-engine
         main.cpp
@@ -62,6 +52,18 @@ add_executable(warstage-engine
         src/geometry/geometry.cpp
         src/geometry/quad-tree.cpp
         src/geometry/velocity-sampler.cpp
+        src/graphics/framebuffer.cpp
+        src/graphics/graphics-api.cpp
+        src/graphics/graphics.cpp
+        src/graphics/pipeline.cpp
+        src/graphics/program.cpp
+        src/graphics/renderbuffer.cpp
+        src/graphics/sampler.cpp
+        src/graphics/shader.cpp
+        src/graphics/texture.cpp
+        src/graphics/vertex-buffer.cpp
+        src/graphics/vertex.cpp
+        src/graphics/viewport.cpp
         src/image/gaussian-blur.cpp
         src/image/image.cpp
         src/image/lodepng.cpp
@@ -101,8 +103,6 @@ add_executable(warstage-engine
         src/value/value.cpp
         src/value/value.test.cpp
         )
-
-
 
 add_test(warstage-engine warstage-engine
         --logger=HRF,all

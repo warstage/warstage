@@ -29,11 +29,12 @@ jobs:
         sudo apt-get install -y libc++-11-dev libc++abi-11-dev
         sudo ln -s /usr/lib/llvm-10 /usr/lib/llvm
 
-    - name: Install boost & glm
+    - name: Install boost, glm, khronos
       run: |
         cd engine/lib
         ./boost.sh
         ./glm.sh
+        ./khronos.sh
 
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
