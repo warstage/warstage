@@ -47,6 +47,37 @@ add_executable(warstage-engine
         src/async/strand-manual.cpp
         src/async/strand.cpp
         src/async/strand.test.cpp
+        src/battle-audio/sound-director.cpp
+        src/battle-gestures/camera-control.cpp
+        src/battle-gestures/camera-gesture.cpp
+        src/battle-gestures/command-gesture.cpp
+        src/battle-gestures/editor-gesture.cpp
+        src/battle-gestures/editor-model.cpp
+        src/battle-gestures/unit-controller.cpp
+        src/battle-model/battle-vm.cpp
+        src/battle-model/height-map.cpp
+        src/battle-model/height-map.test.cpp
+        src/battle-model/image-tiles.cpp
+        src/battle-model/terrain-map.cpp
+        src/battle-simulator/battle-objects.cpp
+        src/battle-simulator/battle-simulator.cpp
+        src/battle-simulator/convert-value.cpp
+        src/battle-view/battle-animator.cpp
+        src/battle-view/battle-view.cpp
+        src/battle-view/camera-state.cpp
+        src/battle-view/render-background.cpp
+        src/battle-view/render-body.cpp
+        src/battle-view/render-debug.cpp
+        src/battle-view/render-facing.cpp
+        src/battle-view/render-marker.cpp
+        src/battle-view/render-movement.cpp
+        src/battle-view/render-phantom.cpp
+        src/battle-view/render-range.cpp
+        src/battle-view/render-selection.cpp
+        src/battle-view/render-sky.cpp
+        src/battle-view/render-terrain.cpp
+        src/battle-view/render-water.cpp
+        src/battle-view/shaders.cpp
         src/geometry/b-spline-patch.cpp
         src/geometry/b-spline.cpp
         src/geometry/geometry.cpp
@@ -96,6 +127,7 @@ add_executable(warstage-engine
         src/runtime/session.cpp
         src/runtime/supervision-policy.cpp
         src/utilities/logging.cpp
+        src/utilities/memory.test.cpp
         src/value/builder.test.cpp
         src/value/compressor.cpp
         src/value/compressor.test.cpp
