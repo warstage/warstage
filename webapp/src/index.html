@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en" style="
+    height: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+">
+<head>
+  <meta charset="utf-8">
+  <title>Warstage</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <style>
+    .loader-div {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      box-sizing: border-box;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 13px;
+      text-shadow: 0 0 3px #000000;
+    }
+    .loader {
+      border: 1px solid #ffffff;
+      border-top: 1px solid #717171;
+      border-bottom: 1px solid #717171;
+      border-radius: 50%;
+      width:96px;
+      height: 96px;
+      box-sizing: border-box;
+      animation: loader-spin 2s linear infinite;
+    }
+    @keyframes loader-spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body style="
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background: rgb(123,171,123);
+    background: linear-gradient(0deg, rgba(160,143,130,1) 0%, rgba(123,171,123,1) 50%, rgba(119,164,199,1) 100%);
+    box-sizing: border-box;
+    font-family: sans-serif;
+    height: 100%;
+    margin: 0;
+    max-height: 100%;
+    min-height: 100%;
+    padding: 0;
+">
+<canvas class="engine" id="canvas" oncontextmenu="event.preventDefault()"></canvas>
+<div id="loader1" class="loader-div"><div class="loader"></div></div>
+<div id="loader2" class="loader-div"><span>loading...</span></div>
+<app-root></app-root>
+</body>
+</html>
