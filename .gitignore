@@ -2,3 +2,9 @@
 .DS_Store
 cmake-build-*
 Testing
+engine-output
+CMakeFiles
+CMakeCache.txt
+*.cmake
+Makefile
+*.cbp

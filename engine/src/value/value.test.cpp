@@ -7,6 +7,11 @@
 
 BOOST_AUTO_TEST_SUITE(value_struct)
 
+    BOOST_AUTO_TEST_CASE(test_fail)
+    {
+        BOOST_CHECK_EQUAL(true, false);
+    }
+
 	BOOST_AUTO_TEST_CASE(undefined_document)
 	{
 		Value doc{};

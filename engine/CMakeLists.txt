@@ -5,8 +5,6 @@ cmake_minimum_required(VERSION 3.13)
 
 project(warstage-engine)
 
-enable_testing()
-
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_EXTENSIONS true)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fcoroutines-ts")
@@ -148,9 +146,4 @@ add_executable(warstage-engine
         src/value/value.test.cpp
         )
 
-add_test(warstage-engine warstage-engine
-        --logger=HRF,all
-        --color_output=false
-        --report_format=HRF
-        --show_progress=no
-        )
+add_test(warstage-engine warstage-engine --logger=HRF,all --color_output=false --report_format=HRF --show_progress=no )
